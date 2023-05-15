@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+/*ROOT COLORS*/
+:root{
+    --main-orange:#e5343b;
+    --main-green:#26954d;
+    --main-blue:#284a67;
+}
+
+/*FONT COLORS*/
+.text-white{
+    color:white ;
+}
+
+.text-green{
+    color:var(--main-green);
+}
+
+.text-blue{
+    color:var(--main-blue);
+}
+
+.text-orange{
+    color:var(--main-orange) ;
+}
+
+.text-white{
+    color:#fff ;
+}
+
+/*BACKGROUND COLORS*/
+.backg-white{
+    background-color:white ;
+}
+
+.backg-green{
+    background-color:var(--main-green);
+}
+
+.backg-blue{
+    background-color:var(--main-blue);
+}
+
+.backg-orange{
+    background-color:var(--main-orange) ;
+}
+
+
+/*FONTS*/
+.font-myr-bold{
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: bold;
+}
+.font-myr-regular{
+    font-family: "Myriad Pro", sans-serif;
+}
+
+.font-title-ucase{
+    font-size: 24pt;
+    text-transform: uppercase;
+}
+
+.font-text{
+    font-size: 20pt;
+}
+
+.font-title{
+    font-size: 24pt;
+}
+
+
+/*BUTTON*/
+.btn-green{
+    background-color: var(--main-green);
+}
+.btn-green:hover{
+    background-color: var(--main-orange);
+}
+
+.btn-orange{
+    background-color: var(--main-orange);
+}
+.btn-orange:hover{
+    background-color: var(--main-green);
+}
+
+.btn-green, .btn-orange{
+    border-radius: 30px;
+    border: none;
+    padding: 5px 15px 5px 15px !important;
+    color: white;
+    margin: 10px 0 15px 0 !important;
+    cursor: pointer;
+}
+
+
+
+.text-center{
+    text-align: center
+}
+
+.social-icons{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+
+ body{
+    /* display: flex;
+    flex-direction: column; */
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    margin: 0;
+} 
+
+

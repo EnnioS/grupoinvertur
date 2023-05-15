@@ -1,0 +1,90 @@
+<header style="position: absolute;width: 100%;">
+    <nav class="menu font-menu font-myr-bold">
+        <section class="menu_container">
+            <img class="menu_logo" width="71px" height="71px" src="assets/img/icons/invertur-logo-22.svg">
+            
+            <div class="meu-btns">
+                <ul class="menu_links">
+                
+                    <li id="menu_item1" class="menu_item">
+                        <a href="#" class="menu_link">Inicio</a>
+                    </li>
+        
+                    <li id="menu_item2" class="menu_item">
+                        <a href="#" class="menu_link">Nosotros</a>
+                    </li>
+        
+                    <li id="menu_item3" class="menu_item menu_item--show" (mouseover)="showSubMenu1=true" (mouseleave)="showSubMenu1=false">
+                        <a href="#" class="menu_link">Negocios<i><img src="assets/img/icons/arrow.svg" class="menu_arrow"></i></a>
+                        <ul id="menu-nesting-first" class="menu-nesting" *ngIf="showSubMenu1">
+                            <div class="nesting-box-container">
+                                <div class="nesting-box-uparrow"><img src="assets/img/icons/uparrowfilled.svg" ></div>
+                                <div class="nesting-box-content font-sub_menu">
+                                    <li id="menu_inside-1" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Consumo</a>
+                                    </li>
+                                    <li id="menu_inside-2" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Farmaceutico</a>
+                                    </li>
+                                    <li id="menu_inside-3" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Turismo</a>
+                                    </li>
+                                    <li id="menu_inside-4" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Publicidad</a>
+                                    </li>
+                                    <li id="menu_inside-5" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Bienes raíces</a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+        
+                    <li class="menu_item menu_item--show" (mouseover)="showSubMenu2=true" (mouseleave)="showSubMenu2=false">
+                        <a href="#" class="menu_link">Alianzas<i><img src="assets/img/icons/arrow.svg" class="menu_arrow"></i></a>
+                        <ul id="menu-nesting-second" class="menu-nesting" *ngIf="showSubMenu2">
+                            <div class="nesting-box-container font-sub_menu">
+                                <div class="nesting-box-uparrow"><img src="assets/img/icons/uparrowfilled.svg" ></div>
+                                <div class="nesting-box-content">
+                                    <li id="menu_inside-6" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Gumapharma</a>
+                                    </li>
+                                    <li id="menu_inside-7" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Innova</a>
+                                    </li>
+                                    <li id="menu_inside-8" class="menu_inside">
+                                        <a href="#" class="menu_link--inside"><i></i>Grupo QUimicos GT</a>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+        
+                    <li class="menu_item">
+                        <a href="#" class="menu_link">
+                            <button class="font-myr-bold btn-green">CONTACTO</button>
+                        </a>
+                    </li>
+        
+                </ul>
+                <div class="idiomas"></div>
+                <div class="divisor_menu"></div>
+                <div class="social-icons">
+                    <a href="#">
+                        <img width="35px" height="35px" src="assets/img/icons/social-18.svg" alt="facebook">
+                    </a>
+                    <a href="#">
+                        <img width="35px" height="35px" src="assets/img/icons/social-19.svg" alt="twitter">
+                    </a>
+                    <a href="#">
+                        <img width="35px" height="35px" src="assets/img/icons/social-20.svg" alt="instagram">
+                    </a>
+                    <a href="#">
+                        <img width="35px" height="35px" src="assets/img/icons/social-21.svg" alt="linkedin">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </nav>
+</header>
+
