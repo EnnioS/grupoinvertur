@@ -1,0 +1,35 @@
+.font-title-contact{
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+.font-text-contact{
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+.btn-green-contacto{
+    background-color: var(--main-green);
+    border-radius: 30px;
+    border: none;
+    padding: 5px 15px 5px 15px !important;
+    color: white;
+    margin: 10px 0 15px 0 !important;
+    cursor: pointer;
+}
+.btn-green-contacto:hover{
+    background-color: var(--main-blue);
+}
+
+.input-contacto{
+    border-radius: 30px; 
+    border: solid 2px #284a67;
+    margin-bottom: 15px; 
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

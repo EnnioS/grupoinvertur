@@ -1,87 +1,117 @@
-<header style="position: absolute;width: 100%;">
-    <nav class="menu font-menu font-myr-bold">
-        <section class="menu_container">
-            <img class="menu_logo" width="71px" height="71px" src="assets/img/icons/invertur-logo-22.svg">
-            
-            <div class="meu-btns">
-                <ul class="menu_links">
+<header [ngStyle]="{'position': 'absolute', 'width': '100%'}">
+    <nav [ngClass]="'menu font-menu font-myr-bold'">
+        <section [ngClass]="'menu_container'">
+            <a href="/">
+                <img [ngClass]="'menu_logo'" width="71px" height="71px" src="assets/img/icons/invertur-logo-22.svg" alt="Logo grupo invertur">
+            </a>
+            <div [ngClass]="'meu-btns'">
+                <ul  [ngClass]="'menu_links'">
                 
-                    <li id="menu_item1" class="menu_item">
-                        <a href="#" class="menu_link">Inicio</a>
+                    <li id="menu_item1" [ngClass]="'menu_item'">
+                        <a href="/" [ngClass]="'menu_link'">Inicio</a>
                     </li>
         
-                    <li id="menu_item2" class="menu_item">
-                        <a href="#" class="menu_link">Nosotros</a>
+                    <li id="menu_item2" [ngClass]="'menu_item'">
+                        <a href="nosotros/" [ngClass]="'menu_link'">Nosotros</a>
                     </li>
         
-                    <li id="menu_item3" class="menu_item menu_item--show" (mouseover)="showSubMenu1=true" (mouseleave)="showSubMenu1=false">
-                        <a href="#" class="menu_link">Negocios<i><img src="assets/img/icons/arrow.svg" class="menu_arrow"></i></a>
-                        <ul id="menu-nesting-first" class="menu-nesting" *ngIf="showSubMenu1">
-                            <div class="nesting-box-container">
-                                <div class="nesting-box-uparrow"><img src="assets/img/icons/uparrowfilled.svg" ></div>
-                                <div class="nesting-box-content font-sub_menu">
-                                    <li id="menu_inside-1" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Consumo</a>
+                    <li id="menu_item3" [ngClass]="['menu_item', 'menu_item--show']" (mouseover)="showSubMenu1=true" (mouseleave)="showSubMenu1=false">
+                        <a href="#" [ngClass]="'menu_link'">Negocios<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></a>
+                        <ul id="menu-nesting-second" [ngClass]="'menu-nesting'" *ngIf="showSubMenu1">
+                            <div [ngClass]="['nesting-box-container' ,'font-sub_menu']">
+                                <div [ngClass]="'nesting-box-uparrow'"><img src="assets/img/icons/uparrowfilled.svg" ></div>
+                                <div [ngClass]="['nesting-box-content', 'font-sub_menu']">
+                                    <li id="menu_inside-1" [ngClass]="'menu_inside'">
+                                        <a href="consumo/" [ngClass]="'menu_link--inside'"><i></i>Consumo</a>
                                     </li>
-                                    <li id="menu_inside-2" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Farmaceutico</a>
+                                    <li id="menu_inside-2" [ngClass]="'menu_inside'">
+                                        <a href="farmaceutica/" [ngClass]="'menu_link--inside'"><i></i>Farmaceutica</a>
                                     </li>
-                                    <li id="menu_inside-3" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Turismo</a>
+                                    <li id="menu_inside-3" [ngClass]="'menu_inside'">
+                                        <a href="turismo/" [ngClass]="'menu_link--inside'"><i></i>Turismo</a>
                                     </li>
-                                    <li id="menu_inside-4" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Publicidad</a>
+                                    <li id="menu_inside-4" [ngClass]="'menu_inside'">
+                                        <a href="publicidad/" [ngClass]="'menu_link--inside'"><i></i>Publicidad</a>
                                     </li>
-                                    <li id="menu_inside-5" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Bienes raíces</a>
+                                    <li id="menu_inside-5" [ngClass]="'menu_inside'">
+                                        <a href="bienes-raices/" [ngClass]="'menu_link--inside'"><i></i>Bienes raíces</a>
                                     </li>
                                 </div>
                             </div>
                         </ul>
                     </li>
         
-                    <li class="menu_item menu_item--show" (mouseover)="showSubMenu2=true" (mouseleave)="showSubMenu2=false">
-                        <a href="#" class="menu_link">Alianzas<i><img src="assets/img/icons/arrow.svg" class="menu_arrow"></i></a>
-                        <ul id="menu-nesting-second" class="menu-nesting" *ngIf="showSubMenu2">
-                            <div class="nesting-box-container font-sub_menu">
-                                <div class="nesting-box-uparrow"><img src="assets/img/icons/uparrowfilled.svg" ></div>
-                                <div class="nesting-box-content">
-                                    <li id="menu_inside-6" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Gumapharma</a>
+                    <li [ngClass]="['menu_item' ,'menu_item--show']" (mouseover)="showSubMenu2=true" (mouseleave)="showSubMenu2=false">
+                        <a href="#" [ngClass]="'menu_link'">Alianzas<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></a>
+                        <ul id="menu-nesting-second" [ngClass]="'menu-nesting'" *ngIf="showSubMenu2">
+                            <div [ngClass]="['nesting-box-container' ,'font-sub_menu']">
+                                <div [ngClass]="'nesting-box-uparrow'"><img src="assets/img/icons/uparrowfilled.svg" ></div>
+                                <div [ngClass]="['nesting-box-content', 'font-sub_menu']">
+                                    <li id="menu_inside-6" [ngClass]="'menu_inside'">
+                                        <a href="http://gumapharma.com/" [ngClass]="'menu_link--inside'"><i></i>Gumapharma</a>
                                     </li>
-                                    <li id="menu_inside-7" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Innova</a>
+                                    <li id="menu_inside-7" [ngClass]="'menu_inside'">
+                                        <a href="https://innovaindustrias.com/es" [ngClass]="'menu_link--inside'"><i></i>Innova</a>
                                     </li>
-                                    <li id="menu_inside-8" class="menu_inside">
-                                        <a href="#" class="menu_link--inside"><i></i>Grupo QUimicos GT</a>
+                                    <li id="menu_inside-8" [ngClass]="'menu_inside'">
+                                        <a href="https://grupoquimicogt.com/" [ngClass]="'menu_link--inside'"><i></i>Grupo QUimicos GT</a>
                                     </li>
                                 </div>
                             </div>
                         </ul>
                     </li>
         
-                    <li class="menu_item">
-                        <a href="#" class="menu_link">
-                            <button class="font-myr-bold btn-green">CONTACTO</button>
+                    <li [ngClass]="'menu_item'">
+                        <a href="contacto/" [ngClass]="'menu_link'">
+                            <button [ngClass]="['font-myr-bold', 'btn-green']">CONTACTO</button>
                         </a>
+                    </li>
+
+                    <li [ngClass]="['menu_item', 'menu_item--show']" (mouseover)="showSubMenu3=true" (mouseleave)="showSubMenu3=false">
+                        <div [ngStyle]="{'display': 'flex', 'flex-direction': 'row', 'align-items': 'center', 'padding': '10px 0 15px 0'}"><img src="{{urlEsFlag}}">
+                            <span href="#" [ngClass]="'menu_link'" [ngStyle]="{'padding': '0 5px'}">{{idioma}}<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></span>
+                        </div>
+                            <ul id="menu-nesting-second" [ngClass]="'menu-nesting'" *ngIf="showSubMenu3">
+                            <div [ngClass]="['nesting-box-container', 'font-sub_menu']">
+                                <div [ngClass]="'nesting-box-uparrow'"><img src="assets/img/icons/uparrowfilled.svg" ></div>
+                                <div [ngClass]="'nesting-box-content'">
+                                    <li id="menu_inside-7" [ngClass]="'menu_inside'">
+                                        <div (click)="cambiarIdiomaEs()" [ngStyle]="{'display': 'flex', 'flex-direction': 'row', 'align-items': 'center'}">
+                                            <img src="{{urlEsFlag}}">
+                                            <button [ngClass]="'menu_link--inside'" [ngStyle]="{'background-color': '#fff', 'border': 'none'}">
+                                                {{es}}
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li id="menu_inside-8" [ngClass]="'menu_inside'">
+                                        <div (click)="cambiarIdiomaEn()" [ngStyle]="{'display': 'flex', 'flex-direction': 'row', 'align-items': 'center'}">
+                                            <img src="{{urlEnFlag}}">
+                                            <button [ngClass]="'menu_link--inside'" [ngStyle]="{'background-color': '#fff', 'border': 'none'}">
+                                                {{en}}
+                                            </button>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
                     </li>
         
                 </ul>
-                <div class="idiomas"></div>
-                <div class="divisor_menu"></div>
-                <div class="social-icons">
-                    <a href="#">
+                
+                <div [ngClass]="['divisor_menu', 'white-separator']"></div>
+                <div [ngClass]="'social-icons'">
+                    <a href="https://www.facebook.com/people/Grupo-Invertur/100092161627700/">
                         <img width="35px" height="35px" src="assets/img/icons/social-18.svg" alt="facebook">
                     </a>
-                    <a href="#">
+                    <!-- <a href="#">
                         <img width="35px" height="35px" src="assets/img/icons/social-19.svg" alt="twitter">
-                    </a>
-                    <a href="#">
+                    </a> -->
+                    <a href="https://www.instagram.com/grupo_invertur/">
                         <img width="35px" height="35px" src="assets/img/icons/social-20.svg" alt="instagram">
                     </a>
-                    <a href="#">
+                    <!-- <a href="#">
                         <img width="35px" height="35px" src="assets/img/icons/social-21.svg" alt="linkedin">
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </section>

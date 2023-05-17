@@ -54,16 +54,16 @@
 }
 
 .font-title-ucase{
-    font-size: 24pt;
+    font-size: 16pt;
     text-transform: uppercase;
 }
 
 .font-text{
-    font-size: 20pt;
+    font-size: 12pt;
 }
 
 .font-title{
-    font-size: 24pt;
+    font-size: 16pt;
 }
 
 
@@ -91,6 +91,24 @@
     cursor: pointer;
 }
 
+/*BARRS*/
+
+.green-barr{
+    background-color: var(--main-green);
+    height: 10px;
+    margin-bottom: 18px;
+}
+
+.blue-barr{
+    background-color: var(--main-blue);
+    height: 4px;
+    margin: 30px 0;
+}
+
+/*MAGENES*/
+.margen-principla{
+    margin: 10px 12% 10px 12%;
+}
 
 
 .text-center{

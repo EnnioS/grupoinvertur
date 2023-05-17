@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nosotros.component.css']
 })
 export class NosotrosComponent implements OnInit {
-
+  title:string = "Conozcanos- Grupo Invertur";
   constructor() { }
 
   ngOnInit(): void {

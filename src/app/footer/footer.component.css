@@ -10,11 +10,6 @@
     margin: 0 10px 0 10px;
 }
 
-.green-barr{
-    background-color: var(--main-green);
-    height: 10px;
-    margin-bottom: 18px;
-}
 .footer-height{
     height: 186px;
 }

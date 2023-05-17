@@ -101,10 +101,6 @@
 }
 
 
-
-
-
-
 .menu_item:hover .menu_arrow{
     transform: rotate(90deg);
     transition: transform .3s;
@@ -116,4 +112,10 @@
 .menu_arrow{
     transform: rotate(0);
     transition: transform .3s;
+}
+
+.white-separator{
+    height: 30px; width: 2px;
+    background-color: #fff;
+    margin: 0 15px 0 15px;
 }
