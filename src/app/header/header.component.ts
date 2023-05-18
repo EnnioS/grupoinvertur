@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   showSubMenu2: boolean = false;
   showSubMenu3: boolean = false;
   idioma: string = "Es";
+  urlFlag:string = "assets/img/icons/flag-1.png";;
 
   es:string = "Español";
   en:string = "Ingles";
@@ -26,6 +27,7 @@ export class HeaderComponent implements OnInit {
       this.es= "Español";
       this.en = "Ingles";
       this.idioma = "Es";
+      this.urlFlag = "assets/img/icons/flag-1.png";
     
   }
 
@@ -34,6 +36,7 @@ export class HeaderComponent implements OnInit {
       this.es= "Spanish";
       this.en = "English";
       this.idioma = "En";
+      this.urlFlag = "assets/img/icons/flag-2.png";
    
   }
 

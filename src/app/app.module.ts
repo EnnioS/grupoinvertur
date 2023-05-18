@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { PublicidadComponent } from './pages/publicidad/publicidad.component';
 import { BienesRaicesComponent } from './pages/bienes-raices/bienes-raices.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MapComponent } from './utilities/map/map.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TurismoComponent,
     PublicidadComponent,
     BienesRaicesComponent,
-    ContactoComponent
+    ContactoComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

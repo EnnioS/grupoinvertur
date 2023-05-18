@@ -1,0 +1,84 @@
+
+
+.rotate-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  z-index: -1; 
+  top: -150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 1.2s;
+}
+@keyframes example {
+  0%   {transform: scale(1,1)}
+  25%  {transform: scalex(-1)}
+  50%  {transform: scale(1,1)}
+  75%  {transform: scalex(-1)}
+  100%  {transform: scale(1,1)}
+}
+
+.animateUnidades{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: absolute;
+  z-index: -1; 
+  top: -150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation-duration: 1.2s;
+}
+
+.unidadConsumo{
+  animation-name: consumo;
+  transform: translate(-11%, -19%)
+}
+@keyframes consumo {
+  0%   {opacity: 0%; transform: translate(0%, 0%)}
+  20%  {opacity: 100%; transform: translate(-11%, -19%)}
+}
+
+.unidadPublicidad{
+  animation-name: publicdad;
+  transform: translate(12%, -19%)
+}
+@keyframes publicdad {
+  20%   {opacity: 0%; transform: translate(0%, 0%)}
+  40%  {opacity: 100%; transform: translate(12%, -19%)}
+}
+
+
+.unidadTurismo{
+  animation-name: turismo;
+  transform: translate(22%, 3%)
+}
+@keyframes turismo {
+  40%   {opacity: 0%; transform: translate(0%, 0%)}
+  60%   {opacity: 100%; transform: translate(22%, 3%)}
+}
+
+.unidadfarmaceutica{
+  animation-name: farmaceutica;
+  transform: translate(-20%, 3%)
+}
+@keyframes farmaceutica {
+  60%   {opacity: 0%; transform: translate(0%, 0%)}
+  80%  {opacity: 100%; transform: translate(-20%, 3%)}
+}
+
+.unidadBienes{
+  flex-direction: column;
+  animation-name: bienes;
+  transform: translate(0%, 24%)
+}
+@keyframes bienes {
+  80%   {opacity: 0%; transform: translate(0%, 0%)}
+  100%  {opacity: 100%; transform: translate(0%, 24%)}
+}

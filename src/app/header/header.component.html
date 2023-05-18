@@ -16,7 +16,7 @@
                     </li>
         
                     <li id="menu_item3" [ngClass]="['menu_item', 'menu_item--show']" (mouseover)="showSubMenu1=true" (mouseleave)="showSubMenu1=false">
-                        <a href="#" [ngClass]="'menu_link'">Negocios<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></a>
+                        <span [ngClass]="'menu_link'">Negocios<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></span>
                         <ul id="menu-nesting-second" [ngClass]="'menu-nesting'" *ngIf="showSubMenu1">
                             <div [ngClass]="['nesting-box-container' ,'font-sub_menu']">
                                 <div [ngClass]="'nesting-box-uparrow'"><img src="assets/img/icons/uparrowfilled.svg" ></div>
@@ -42,7 +42,7 @@
                     </li>
         
                     <li [ngClass]="['menu_item' ,'menu_item--show']" (mouseover)="showSubMenu2=true" (mouseleave)="showSubMenu2=false">
-                        <a href="#" [ngClass]="'menu_link'">Alianzas<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></a>
+                        <span href="#" [ngClass]="'menu_link'">Alianzas<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></span>
                         <ul id="menu-nesting-second" [ngClass]="'menu-nesting'" *ngIf="showSubMenu2">
                             <div [ngClass]="['nesting-box-container' ,'font-sub_menu']">
                                 <div [ngClass]="'nesting-box-uparrow'"><img src="assets/img/icons/uparrowfilled.svg" ></div>
@@ -68,7 +68,7 @@
                     </li>
 
                     <li [ngClass]="['menu_item', 'menu_item--show']" (mouseover)="showSubMenu3=true" (mouseleave)="showSubMenu3=false">
-                        <div [ngStyle]="{'display': 'flex', 'flex-direction': 'row', 'align-items': 'center', 'padding': '10px 0 15px 0'}"><img src="{{urlEsFlag}}">
+                        <div [ngStyle]="{'display': 'flex', 'flex-direction': 'row', 'align-items': 'center', 'padding': '10px 0 15px 0'}"><img src="{{urlFlag}}">
                             <span href="#" [ngClass]="'menu_link'" [ngStyle]="{'padding': '0 5px'}">{{idioma}}<i><img src="assets/img/icons/arrow.svg" [ngClass]="'menu_arrow'"></i></span>
                         </div>
                             <ul id="menu-nesting-second" [ngClass]="'menu-nesting'" *ngIf="showSubMenu3">
