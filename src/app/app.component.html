@@ -1,7 +1,9 @@
     
-       <app-header></app-header>
+       <div style="min-height: 100vh; width: 100%; overflow:hidden; position: relative; margin: 0;">
+       <app-header (IdiomaEvent)="selectedlang($event)"></app-header>
        <router-outlet></router-outlet>
-        <app-footer></app-footer>
+       </div>
+        <app-footer [idiomaEs]="idiomaEsp"></app-footer>
         
     
     

@@ -10,24 +10,25 @@ import { BienesRaicesComponent } from "./pages/bienes-raices/bienes-raices.compo
 import {ContactoComponent} from "./pages/contacto/contacto.component";
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent },
-  {path: 'nosotros', component: NosotrosComponent},
-  {path: 'consumo', component: ConsumoComponent},
-  {path: 'farmaceutica', component: FarmaceuticaComponent},
-  {path: 'turismo', component: TurismoComponent},
-  {path: 'publicidad', component: PublicidadComponent},
-  {path: 'bienes-raices', component: BienesRaicesComponent},
-  {path: 'contacto', component: ContactoComponent},
-  {path: '**', pathMatch:'full', redirectTo: 'home' }
+  {path: 'inicio', title:"Inicio - Grupo Invertur", component: HomeComponent },
+  {path: 'nosotros', title:"Conózcanos - Grupo Invertur", component: NosotrosComponent},
+  {path: 'consumo', title:"Consumo - Grupo Invertur", component: ConsumoComponent},
+  {path: 'farmaceutica', title:"Farmacéutica - Grupo Invertur", component: FarmaceuticaComponent},
+  {path: 'turismo', title:"turismo - Grupo Invertur", component: TurismoComponent},
+  {path: 'publicidad', title:"Publicidad - Grupo Invertur", component: PublicidadComponent},
+  {path: 'bienes-raices', title:"Bienes raíces - Grupo Invertur", component: BienesRaicesComponent},
+  {path: 'contacto', title:"Contáctanos - Grupo Invertur", component: ContactoComponent},
+  {path:'',redirectTo:'inicio', pathMatch:'full'},
+  {path:'**', redirectTo:'inicio', pathMatch:'full'}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)
-    //RouterModule.forRoot(app_routes,{useHash: true})//useHash es para infdicarles que no existen carpetas con el nmbe de la ruta, cuando se agregue aun servidor Linux habrá que quitarlo y configurar el htaccess para decirle al servido que todas las rutas pasen por el index.html
+    //RouterModule.forRoot(routes,{useHash: true})//useHash es para infdicarles que no existen carpetas con el nmbe de la ruta, cuando se agregue aun servidor Linux habrá que quitarlo y configurar el htaccess para decirle al servido que todas las rutas pasen por el index.html
   ],
-  
   exports: [RouterModule]
 })
+
 export class AppRoutingModule {
   
 }

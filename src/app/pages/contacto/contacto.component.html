@@ -1,46 +1,28 @@
 <div class="backg-orange">
     <div [ngStyle]="{'padding-top':'140px'}">
-        <div class="text-center font-myr-bold font-title text-white" [ngStyle]="{'margin-bottom':'30px'}">¿COMO PODEMOS AYUDARLE?</div>
+        <div class="text-center font-myr-bold font-title text-white" [ngStyle]="{'margin-bottom':'30px'}">{{'titulo-contact' | translate}}</div>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 text-white font-myr-regular">
+                <div class="col-md-6 text-white font-myr-regular ">
                     <p [ngStyle]="{'margin-bottom':'30px'}">
-                        <span [ngClass]="['font-title-contact']">CORREO ELECTRÓNICO</span><br>
-                        <span [ngClass]="['font-text-contact']">info@grupoinvertur.com</span><br>
+                       
+                        <span [ngClass]="['font-title-contact']">{{'email-title-contact' | translate}}</span><br>
+                        <span [ngClass]="['font-text-contact']">{{'email-contact' | translate}}</span><br>
                     </p>
 
                     <p [ngStyle]="{'margin-bottom':'30px'}">
-                        <span [ngClass]="['font-title-contact']">TELÉFONOS</span><br>
-                        <span [ngClass]="['font-text-contact']">+(505) 2278-7007 | +(505) 8285-0301</span><br>
+                        <span [ngClass]="['font-title-contact']">{{'Telefono-title-contact' | translate}}</span><br>
+                        <span [ngClass]="['font-text-contact']">{{'Telefono1-contact' | translate}}<br> {{'Telefono2-contact' | translate}}</span><br>
                     </p>
 
                     <p [ngStyle]="{'margin-bottom':'30px'}">
-                        <span [ngClass]="['font-title-contact']">DIRECCIÓN</span><br>
-                        <span [ngClass]="['font-text-contact']">Hotel Seminole 3c. al Norte, 1c. al Este, Managua, Nicaragua</span><br>
+                        <span [ngClass]="['font-title-contact']">{{'Direccion-title-contact' | translate}}</span><br>
+                        <span [ngClass]="['font-text-contact']">{{'Direccion-contact' | translate}}</span><br>
                     </p>
 
                 </div>
-                <div class="col-md-6 ">
-                    
-                    <form style="margin-bottom: 30px;" [action]=""> 
-                        <div class="row align-item-center">
-                            <div class="col-md-12 input-contacto">
-                                <input style="width: 100%; border: none;" type="text" [(ngModel)]="nombre" placeholder="Nombre">
-                            </div>
-                            <div class="col-md-12 input-contacto">
-                                <input style="width: 100%;border: none;" type="email" [(ngModel)]="email" placeholder="Email">
-                            </div>
-                            <div class="col-md-12 input-contacto">
-                                <input style="width: 100%;border: none;" type="text" [(ngModel)]="asunto" placeholder="Asunto">
-                            </div>
-                            <div  class="col-md-12 input-contacto">
-                                <textarea style="width: 100%;border: none;"  rows="10" cols="50" [(ngModel)]="texto" placeholder="Texto"></textarea>
-                            </div>
-                            <div  class="col-md-12" style="text-align: right;">
-                                <button type="button" class="btn-green-contacto">ENVIAR</button>
-                            </div>
-                        </div>
-                    </form>
+                <div [ngClass]="['col-md-6', 'formContactContainer']">
+                    <app-form-contact (arrayFormDataEvent)="catchFormEventData($event)"></app-form-contact>
                 </div>
             </div>
         </div>
@@ -48,6 +30,6 @@
 </div>
 <div class="green-barr" style="margin: 0;"></div>
 
-<div style="height: 700px;">
+<div style="height: 500px;">
     <app-map></app-map>
 </div>

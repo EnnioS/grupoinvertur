@@ -1,3 +1,18 @@
+.backgroundHome{
+  background: rgb(0,122,143);
+  background: radial-gradient(circle, rgba(0,122,143,1) 4%, rgba(40,74,103,1) 99%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  padding-top: 50px;
+  z-index: -1;
+}
+
+.backgroundHome span{
+  font-size: 50px;
+  font-weight: 800;
+  color:rgba(255, 255, 255, 0.1);
+}
 
 
 .rotate-logo{
@@ -5,7 +20,7 @@
   justify-content: center;
   align-items: center; 
   z-index: -1; 
-  top: -150px;
+  top: -0px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -28,30 +43,29 @@
   align-items: center; 
   position: absolute;
   z-index: -1; 
-  top: -150px;
+  top: 0px;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
   animation-duration: 1.2s;
 }
 
 .unidadConsumo{
   animation-name: consumo;
-  transform: translate(-11%, -19%)
+  transform: translate(-11%, -23%)
 }
 @keyframes consumo {
   0%   {opacity: 0%; transform: translate(0%, 0%)}
-  20%  {opacity: 100%; transform: translate(-11%, -19%)}
+  20%  {opacity: 100%; transform: translate(-11%, -23%)}
 }
 
 .unidadPublicidad{
   animation-name: publicdad;
-  transform: translate(12%, -19%)
+  transform: translate(12%, -23%)
 }
 @keyframes publicdad {
   20%   {opacity: 0%; transform: translate(0%, 0%)}
-  40%  {opacity: 100%; transform: translate(12%, -19%)}
+  40%  {opacity: 100%; transform: translate(12%, -23%)}
 }
 
 
@@ -76,9 +90,92 @@
 .unidadBienes{
   flex-direction: column;
   animation-name: bienes;
-  transform: translate(0%, 24%)
+  transform: translate(0%, 33%)
 }
 @keyframes bienes {
   80%   {opacity: 0%; transform: translate(0%, 0%)}
-  100%  {opacity: 100%; transform: translate(0%, 24%)}
+  100%  {opacity: 100%; transform: translate(0%, 33%)}
+}
+
+ body{
+   height: 100%;
+} 
+.font-home{
+  font-size: 12pt !important;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+
+.mainlogoInverturContainerMovil{
+  text-align: center;
+  animation-name: example;
+  animation-duration: 1.2s;
+}
+
+.home-items{
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  font-size: 15pt;
+}
+
+.home-items a{
+  text-decoration: none;
+}
+
+.min700pxHomeContainer{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 100px 20px 20px 20px;
+}
+
+.unidadesMovil{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 8px;
+}
+.unidadesMovil:hover{
+  animation: unidades 200ms ease-in-out forwards;
+}
+
+@keyframes unidades {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .font-home{
+    font-size: 10pt !important;
+  }
+  .backgroundHome span{
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width:750px){
+
+  .homeAnmationContainer{
+    display: none;
+  }
+  .min700pxHomeContainer{
+    display: flex;
+  }
+
+  .backgroundHome span{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:500px){
+  .backgroundHome span{
+    font-size: 20px;
+  }
 }

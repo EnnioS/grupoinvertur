@@ -1,17 +1,18 @@
 <div style="background-color: #26954d;">
-    <img src="assets/img/inverfarma.jpg" width="100%" alt="inverfarma promocion">
+    <img [ngClass]="['web-res']" [src]="'assets/img/inverfarma.jpg'" width="100%" alt="inverfarma promocion">
+    <img [ngClass]="['movil-res']" [src]="'assets/img/Inverfarma-movil.jpg'" width="100%" halt="puedo real state promocion">
 </div>
 <div class="green-barr">
 </div>
-<section style="padding-bottom: 220px;" class="margen-principla text-center">
+<section class="margen-principla text-center">
     <div>
-        <h1 hidden>FARMACEUTICA</h1>
+        <h1 hidden>{{'title-inverfarma-page' | translate}}</h1>
         <div class="text-center">
             <img src="assets/img/unidades/INVERFARMA.png" height="100px" alt="logo inverfarma">
         </div>
         <div class="blue-barr"></div>
         <span class="font-text font-myr-regular">
-            Dedicada a la Importación, Distribución y Comercialización de productos farmacéuticos.
+            {{'texto-inverfarma-page' | translate}}
         </span>
         <div class="blue-barr"></div>
     </div>

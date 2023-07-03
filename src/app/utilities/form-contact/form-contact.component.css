@@ -1,0 +1,36 @@
+
+.btn-green-contacto{
+    background-color: var(--main-green);
+    border-radius: 30px;
+    border: none;
+    padding: 5px 15px 5px 15px !important;
+    color: white;
+    margin: 10px 0 15px 0 !important;
+    cursor: pointer;
+}
+.btn-green-contacto:hover{
+    background-color: var(--main-blue);
+}
+
+.input-contacto{
+    border-radius: 30px; 
+    border: solid 2px #284a67;
+    margin-bottom: 15px; 
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+@media screen and (max-width: 530px) {
+    .btn-green-contacto{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        font-size: 14pt;
+        font-weight: 700;
+    }
+}

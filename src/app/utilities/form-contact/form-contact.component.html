@@ -1,0 +1,73 @@
+<!-- FORM template-driven, usando ngForm enlazando variables de input dentro de variable de form, la cual se puede pasar como {{ object | json }}
+usando ngMdel y propiedad name dentro de los inputs para que funcione -->
+<!-- /<pre>{{contactForm.value | json}}</pre> -->
+<alert></alert>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" style="margin-bottom: 30px;"> 
+    <div class="row align-item-center">
+        <div [hidden]="name.valid || name.pristine" style="color:white">{{'Name-error-input-contact' | translate}}</div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="text" id="name" name="name" placeholder="{{'Name-input-contact' | translate}}" ngModel required #name="ngModel">
+        </div>
+
+        <div [hidden]="email.valid || email.pristine" style="color:white">{{'Email-error-input-contact' | translate}}</div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="email" id="email" name="email" placeholder="{{'Email-input-contact' | translate}}" ngModel required #email="ngModel">
+        </div>
+
+        <div [hidden]="subject.valid || subject.pristine" style="color:white">{{'Subject-error-input-contact' | translate}}</div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="text" id="subject" name="subject" placeholder="{{'Asunto-input-contact' | translate}}" ngModel required #subject="ngModel">
+        </div>
+        <div [hidden]="message.valid || message.pristine" style="color:white">{{'Text-error-input-contact' | translate}}</div>
+        <div  class="col-md-12 input-contacto">
+            <textarea style="width: 100%; border: none;"  rows="10" cols="50" id="message" name="message" placeholder="{{'Texto-input-contact' | translate}}" ngModel required #message="ngModel"></textarea>
+        </div>
+
+        <div  class="col-md-12" style="text-align: right;">
+            <button type="submit" class="btn-green-contacto" [disabled]="contactForm.invalid">{{'enviar-btn-contact' | translate}}</button>
+        </div>
+        
+    </div>
+</form>
+
+<!--Form enlazado con etiqueta y valor enviado a una función dentr del boton de enviar 
+    <form #contactForm="ngForm" style="margin-bottom: 30px;" [action]=""> 
+    <div class="row align-item-center">
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="text" #nombre placeholder="Nombre">
+        </div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="email" #email placeholder="Email">
+        </div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="text" #asunto placeholder="Asunto">
+        </div>
+        <div  class="col-md-12 input-contacto">
+            <textarea style="width: 100%; border: none;"  rows="10" cols="50" #texto placeholder="Texto"></textarea>
+        </div>
+        <div  class="col-md-12" style="text-align: right;">
+            <button type="button" (click)="sendMessage(nombre.value, email.value,asunto.value, texto.value)" class="btn-green-contacto">ENVIAR</button>
+        </div>
+    </div>
+</form> -->
+<!-- 
+FORM con campos con nombres de variable en ngModel para comunacación en doble vía (banana on th ebox )
+
+    <div class="row align-item-center">
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="text" [(ngModel)]="nombre" placeholder="Nombre">
+        </div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="email" [(ngModel)]="email" placeholder="Email">
+        </div>
+        <div class="col-md-12 input-contacto">
+            <input style="width: 100%; border: none;" type="text" [(ngModel)]="asunto" placeholder="Asunto">
+        </div>
+        <div  class="col-md-12 input-contacto">
+            <textarea style="width: 100%; border: none;"  rows="10" cols="50" [(ngModel)]="texto" placeholder="Texto"></textarea>
+        </div>
+        <div  class="col-md-12" style="text-align: right;">
+            <button type="button" (click)="sendMessage(nombre.value, email.value,asunto.value, texto.value)" class="btn-green-contacto">ENVIAR</button>
+        </div>
+    </div>-->
+

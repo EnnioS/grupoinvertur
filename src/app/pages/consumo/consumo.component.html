@@ -1,19 +1,54 @@
 <div style="background-color: #26954d;">
-    <img src="assets/img/invertur.jpg" width="100%" alt="invertur promocion">
+    <img [ngClass]="['web-res']" [src]="'assets/img/invertur.jpg'" width="100%" alt="invertur promocion">
+    <img [ngClass]="['movil-res']" [src]="'assets/img/Invertur-movil.jpg'" width="100%" halt="puedo real state promocion">
+
 </div>
 <div class="green-barr">
 </div>
-<section style="padding-bottom: 220px;" class="margen-principla text-center">
+<section class="margen-principla text-center">
     <div>
-        <h1 hidden>CONSUMO</h1>
+        <h1 hidden>{{'title-invertur-page' | translate}}</h1>
         <div class="text-center">
             <img src="assets/img/unidades/Logo-INVERTUR.png" height="100px" alt="logo invertur">
         </div>
         <div class="blue-barr"></div>
         <span class="font-text font-myr-regular">
-            Dedicada a la Importación, Distribución y Comercialización de productos de consumo, cosméticos e higiénicos. 
+            {{'texto-invertur-page' | translate}} 
         </span>
         <div class="blue-barr"></div>
     </div>
-    
+</section>
+<section>
+    <!-- <img [src]="'assets/img/triangles-39.jpg'" width="100%"> -->
+    <div [ngClass]="['grayLogoContainer']">
+        <div class="container font-title font-myr-bold" style="padding: 30px 0 5px 0;">
+            <span>{{'marcas-title-invertur-page' | translate}}</span>
+        </div>
+        <div [ngClass]="['margen-principla', 'logosSquaresContainer']">
+
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']"  [src]="'assets/img/marcas/marcas-33.jpg'">
+            </div>
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']"  [src]="'assets/img/marcas/marcas-32.jpg'">
+            </div>
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']"  [src]="'assets/img/marcas/marcas-34.jpg'">
+            </div>
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']" [src]="'assets/img/marcas/marcas-38.jpg'">
+            </div>
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']"  [src]="'assets/img/marcas/marcas-31.jpg'">
+            </div>
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']"  [src]="'assets/img/marcas/marcas-35.jpg'">
+            </div>
+            <div [ngClass]="['logoSquare']">
+                <img [ngClass]="['imgMarcaSyle']"  [src]="'assets/img/marcas/marcas-36.jpg'">
+            </div>
+                     
+        </div>
+    </div>
+    <!-- <img [src]="'assets/img/triangles-40.jpg'" width="100%"> -->
 </section>

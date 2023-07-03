@@ -1,0 +1,26 @@
+.grayLogoContainer{
+    width: 100%; 
+    background-color: #E0E0E0;
+    margin: 15px 0 45px 0;
+}
+.logosSquaresContainer{
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: center; 
+    gap: 15px; 
+    padding: 20px 0 20px 0;
+}
+
+.logoSquare{
+    display:flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 225px; 
+    height: 225px;
+    border-radius: 5px; 
+    background-color: #fff;
+}
+
+.imgMarcaSyle{
+    width: 80%;
+}

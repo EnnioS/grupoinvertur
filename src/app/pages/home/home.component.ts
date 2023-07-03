@@ -1,5 +1,6 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
+import { IdiomaService } from 'src/app/services/idioma/idioma.service';
 
 
 @Component({
@@ -18,12 +19,52 @@ import {trigger, state, style, animate, transition} from '@angular/animations';
   ]
 })
 export class HomeComponent implements OnInit {
+
+  idiomaEs!: boolean;
+
+  uNegocios = {
+    consumo:"Consumo",
+    farmaceutica:"Farmaceutica",
+    turismo:"Turismo",
+    publicidad:"Publicidad",
+    bienes_raices:"Bienes Raíces",
+};
+
+@Input() idioma!:string;
+
   state: string = 'rotated';
-  constructor() { }
+  constructor(private idiomaService: IdiomaService) { }
+  
 
-  ngOnInit(): void { this.rotate()}
+  ngOnInit(): void { this.rotate()
+    
+    this.idiomaService.getIdiomaFromSevice().subscribe(idiomaEs =>{
+      this.idiomaEs = idiomaEs;
+    });
 
+    this.changeLang();
+  }
+
+  changeLang(){
+    if(this.idiomaEs){
+      
+      this.uNegocios.consumo = "Consumo";
+      this.uNegocios.farmaceutica = "Farmaceutica";
+      this.uNegocios.turismo = "Turismo";
+      this.uNegocios.publicidad = "Publicidad";
+      this.uNegocios.bienes_raices = "Bienes Raíces";
+    }else if(!this.idiomaEs){
+      this.uNegocios.consumo = "Consumption";
+      this.uNegocios.farmaceutica = "Pharmaceutical";
+      this.uNegocios.turismo = "Tourism";
+      this.uNegocios.publicidad = "Advertaisong";
+      this.uNegocios.bienes_raices = "Real Estate";
+    }
+  }
+    
   rotate() {
     this.state = (this.state === 'default' ? 'rotated' : 'default');
-}
+  }
+
+ 
 }

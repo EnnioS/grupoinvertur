@@ -8,7 +8,7 @@
         <!-- <a href="#">
             <img width="35px" height="35px" src="assets/img/icons/social-19.svg" alt="twitter">
         </a> -->
-        <a href="https://www.instagram.com/grupo_invertur/">
+        <a [href]="['https://www.instagram.com/grupo_invertur/']">
             <img width="35px" height="35px" src="assets/img/icons/social-20.svg" alt="instagram">
         </a>
         <!-- <a href="#">
@@ -16,12 +16,11 @@
         </a> -->
     </div>
     <div>
-        <a href="contacto/">
-            <button class="font-myr-bold btn-green">CONTACTANOS</button>
+        <a [routerLink]="['contacto']">
+            <button class="font-myr-bold btn-green">{{'footer_contacto' | translate}}</button>
         </a>
     </div>
     <div class="font-myr-regular font-footer-text">
-        Grupo Invertur, Todos los derechos reservados - Copyright© {{anio.getFullYear()}}<br>
-        diseño y desarrollo por Ennio Sáenz
+        {{'footerText' | translate}} Diseño y Desarrollo por Ennio Sáenz<br>
     </div>
 </footer>

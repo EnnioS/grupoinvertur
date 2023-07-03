@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient,  HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,15 @@ import { BienesRaicesComponent } from './pages/bienes-raices/bienes-raices.compo
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MapComponent } from './utilities/map/map.component';
+import { FormContactComponent } from './utilities/form-contact/form-contact.component';
+
+import { IdiomaService } from './services/idioma/idioma.service';
+
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+import { AlertModule } from './alert';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +41,8 @@ import { MapComponent } from './utilities/map/map.component';
     PublicidadComponent,
     BienesRaicesComponent,
     ContactoComponent,
-    MapComponent
+    MapComponent,
+    FormContactComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +50,24 @@ import { MapComponent } from './utilities/map/map.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    AlertModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    IdiomaService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+
+export function httpTranslateLoader(http: HttpClient){
+  return new TranslateHttpLoader(http);
+}
